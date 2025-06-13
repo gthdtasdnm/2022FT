@@ -1,3 +1,5 @@
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Node extends GraphItem{
@@ -5,8 +7,10 @@ public class Node extends GraphItem{
     private List<Edge> edges;
     private Graph graph;
 
-    protected Node(String name) {
+    protected Node(Graph graph, String name) {
         super(name);
+        this.graph = graph;
+        this.edges = new ArrayList<>();
     }
 
     public List<Edge> getEdges(){

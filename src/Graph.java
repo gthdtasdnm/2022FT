@@ -8,7 +8,7 @@ public class Graph {
     public List<Edge> getEdges() { return edges; }
 
     protected Node addNode(String name){
-        Node n = new Node(name);
+        Node n = new Node(this, name);
         nodes.add(n);
         return n;
     }
